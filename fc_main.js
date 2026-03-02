@@ -2640,7 +2640,7 @@ function fcWin(what) {
             if (Game.Achievements[what].won == 0) {
                 var achname = Game.Achievements[what].shortName
                     ? Game.Achievements[what].shortName
-                    : Game.Achievements[what].name;
+                    : Game.Achievements[what].dname;
                 Game.Achievements[what].won = 1;
                 //This happens a ton of times on CPS achievements; it seems like they would be CHECKED for, but a debug message placed
                 //here gets repeatedly called seeming to indicate that the achievements.won value is 1, even though the achievement isn't
