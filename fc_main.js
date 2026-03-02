@@ -2638,9 +2638,7 @@ function fcWin(what) {
     if (typeof what === "string") {
         if (Game.Achievements[what]) {
             if (Game.Achievements[what].won == 0) {
-                var achname = Game.Achievements[what].shortName
-                    ? Game.Achievements[what].shortName
-                    : Game.Achievements[what].dname;
+                var achname = Game.Achievements[what].dname;
                 Game.Achievements[what].won = 1;
                 //This happens a ton of times on CPS achievements; it seems like they would be CHECKED for, but a debug message placed
                 //here gets repeatedly called seeming to indicate that the achievements.won value is 1, even though the achievement isn't
@@ -2648,9 +2646,9 @@ function fcWin(what) {
                 //values being turned off before the game checks again? There must be some reason Game.Win is replaced with fcWin
                 if (!FrozenCookies.disabledPopups) {
                     logEvent(
-                        "Achievement",
-                        "Achievement unlocked :<br>" +
-                            Game.Achievements[what].name +
+                        "実績",
+                        "実績解除 :<br>" +
+                            achname +
                             "<br> ",
                         true
                     );
