@@ -19,7 +19,7 @@ var scriptElement =
         : document.getElementById("modscript_frozen_cookies");
 var baseUrl =
     scriptElement !== null
-        ? scriptElement.getAttribute("src").replace(/\/frozen_cookies\.js$/, "")
+        ? scriptElement.getAttribute("src").replace(/\/frozen_cookies\.js$/, "").replace(/\/$/, "")
         : "https://sokusekimen-ship-it.github.io/FrozenCookies/";
 var FrozenCookies = {
     baseUrl: baseUrl,
