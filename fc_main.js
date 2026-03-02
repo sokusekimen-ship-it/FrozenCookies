@@ -2657,7 +2657,7 @@ function fcWin(what) {
                 }
                 if (FrozenCookies.showAchievements) {
                     Game.Notify(
-                        "Achievement unlocked",
+                        "実績解除",
                         '<div class="title" style="font-size:18px;margin-top:-2px;">' +
                             achname +
                             "</div>",
